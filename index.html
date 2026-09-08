@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHQ-9 Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <header class="header">
+      <h1 data-bind-text="form_details.title"></h1>
+    </header>
+
+    <div class="instructions-container">
+      <p class="instructions" data-bind-text="form_details.instructions"></p>
+    </div>
+
+    <div class="form-content">
+      <div class="table-header">
+        <div class="th-question"></div>
+        <div class="th-options" id="options-header"></div>
+      </div>
+
+      <div id="questions-container"></div>
+
+      <div class="office-coding">
+        FOR OFFICE CODING <span id="calc-col-0">0</span> + <span id="calc-col-1">0</span> + <span id="calc-col-2">0</span> + <span id="calc-col-3">0</span> = Total Score: <span id="calc-total">0</span>
+      </div>
+
+      <div class="difficulty-section" data-bind-show="difficulty_section.show_difficulty">
+        <p class="difficulty-text" data-bind-text="difficulty_section.question_text"></p>
+        <div class="difficulty-options" id="difficulty-options-container"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p data-bind-text="form_details.footer_text"></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+  "app_id": "phq9-form",
+  "document_version": 1,
+  "sections": {
+    "app_settings": {
+      "description": "Global settings for the application.",
+      "primary_color": { "type": "color", "label": "Primary Color", "value": "#000080" },
+      "background_color": { "type": "color", "label": "Background Color", "value": "#ffffff" },
+      "text_color": { "type": "color", "label": "Text Color", "value": "#000000" }
+    },
+    "form_details": {
+      "description": "Main headers and instructions for the form.",
+      "title": { "type": "text", "label": "Form Title", "value": "PATIENT HEALTH QUESTIONNAIRE-9 (PHQ-9)" },
+      "instructions": { "type": "text", "label": "Instructions", "value": "Over the last 2 weeks, how often have you been bothered by any of the following problems?" },
+      "footer_text": { "type": "textarea", "label": "Footer Text", "value": "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute." }
+    },
+    "options": {
+      "description": "The answer options and their point values for the main questions.",
+      "type": "collection",
+      "label": "Answer Options",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "label": { "type": "text", "label": "Option Text" },
+        "value": { "type": "number", "label": "Point Value", "meta": { "format": "integer" } }
+      },
+      "value": [
+        { "id": "opt_a1b2c3", "label": "Not at all", "value": 0 },
+        { "id": "opt_d4e5f6", "label": "Several days", "value": 1 },
+        { "id": "opt_g7h8i9", "label": "More than half the days", "value": 2 },
+        { "id": "opt_j1k2l3", "label": "Nearly every day", "value": 3 }
+      ]
+    },
+    "questions": {
+      "description": "The main questionnaire items.",
+      "type": "collection",
+      "label": "Questions",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "text": { "type": "text", "label": "Question Text" }
+      },
+      "value": [
+        { "id": "q_m4n5o6", "text": "1. Little interest or pleasure in doing things" },
+        { "id": "q_p7q8r9", "text": "2. Feeling down, depressed, or hopeless" },
+        { "id": "q_s1t2u3", "text": "3. Trouble falling or staying asleep, or sleeping too much" },
+        { "id": "q_v4w5x6", "text": "4. Feeling tired or having little energy" },
+        { "id": "q_y7z8a9", "text": "5. Poor appetite or overeating" },
+        { "id": "q_b1c2d3", "text": "6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down" },
+        { "id": "q_e4f5g6", "text": "7. Trouble concentrating on things, such as reading the newspaper or watching television" },
+        { "id": "q_h7i8j9", "text": "8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual" },
+        { "id": "q_k1l2m3", "text": "9. Thoughts that you would be better off dead or of hurting yourself in some way" }
+      ]
+    },
+    "difficulty_section": {
+      "description": "The follow-up difficulty question at the end.",
+      "question_text": { "type": "text", "label": "Difficulty Question Text", "value": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?" },
+      "show_difficulty": { "type": "boolean", "label": "Show Difficulty Question", "value": true }
+    },
+    "difficulty_options": {
+      "description": "Answer options for the difficulty question.",
+      "type": "collection",
+      "label": "Difficulty Options",
+      "item_schema": {
+        "id": { "type": "text", "label": "ID" },
+        "label": { "type": "text", "label": "Option Text" }
+      },
+      "value": [
+        { "id": "diff_n4o5p6", "label": "Not difficult at all" },
+        { "id": "diff_q7r8s9", "label": "Somewhat difficult" },
+        { "id": "diff_t1u2v3", "label": "Very difficult" },
+        { "id": "diff_w4x5y6", "label": "Extremely difficult" }
+      ]
+    }
+  }
+}

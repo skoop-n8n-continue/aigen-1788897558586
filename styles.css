@@ -1,0 +1,205 @@
+:root {
+  /* No default values for data-driven properties */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+}
+
+#app-container.loaded {
+  opacity: 1;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.instructions-container {
+  margin-bottom: 20px;
+}
+
+.instructions {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.form-content {
+  border-top: 2px solid #333;
+}
+
+.table-header {
+  display: flex;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.th-question {
+  flex: 1;
+}
+
+.th-options {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.th-option-label {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.question-row {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  align-items: center;
+}
+
+.question-text {
+  flex: 1;
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+.question-options {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.radio-container {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Touch-friendly radio buttons for tablet */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #888;
+  border-radius: 5px; /* slight rounding */
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s;
+  margin: 0;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+}
+input[type="radio"]:checked::after {
+  content: '✓';
+  display: block;
+  color: white;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+
+.option-value {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+.office-coding {
+  text-align: right;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #333;
+}
+
+.office-coding span {
+  display: inline-block;
+  min-width: 40px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.difficulty-section {
+  padding: 20px 0;
+}
+
+.difficulty-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.difficulty-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.diff-radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+.diff-radio-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #666;
+  text-align: left;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
